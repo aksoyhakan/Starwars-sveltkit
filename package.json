@@ -1,0 +1,23 @@
+{
+	"name": "starwars",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"serve-json": "json-server --watch db.json --port 4000"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.20.4",
+		"svelte": "^4.0.5",
+		"vite": "^4.4.2"
+	},
+	"type": "module",
+	"dependencies": {
+		"js-cookie": "^3.0.5",
+		"json-server": "^0.17.3",
+		"svelte-cookie": "^1.0.1"
+	}
+}

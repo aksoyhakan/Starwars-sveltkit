@@ -1,0 +1,37 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "Hakan",
+            "password": "12345",
+            "role": "admin"
+        },
+        {
+            "id": 2,
+            "username": "Kenan",
+            "password": "123456"
+        },
+        {
+            "id": 3,
+            "username": "Meltem",
+            "password": "1234"
+        }
+    ],
+    "header": {
+        "title": "Welcome to Starwars",
+        "login": "Login",
+        "register": "Register",
+        "players": "Players",
+        "planets": "Planets",
+        "logout":"Logout"
+    },
+    "footer": {
+        "copyright": "Trade mark",
+        "contact": "Contact"
+    },
+    "starwars": {
+        "title":"Welcome to Star Wars",
+        "welcomeMessage":"You can find whatever you want about Star Wars in this site",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2560px-Star_Wars_Logo.svg.png"
+    }
+}
