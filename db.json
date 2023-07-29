@@ -1,37 +1,51 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "Hakan",
-            "password": "12345",
-            "role": "admin"
-        },
-        {
-            "id": 2,
-            "username": "Kenan",
-            "password": "123456"
-        },
-        {
-            "id": 3,
-            "username": "Meltem",
-            "password": "1234"
-        }
-    ],
-    "header": {
-        "title": "Welcome to Starwars",
-        "login": "Login",
-        "register": "Register",
-        "players": "Players",
-        "planets": "Planets",
-        "logout":"Logout"
+  "users": [
+    {
+      "id": 1,
+      "username": "Hakan",
+      "password": "12345",
+      "role": "admin"
     },
-    "footer": {
-        "copyright": "Trade mark",
-        "contact": "Contact"
+    {
+      "id": 2,
+      "username": "Kenan",
+      "password": "123456",
+      "role": "user"
     },
-    "starwars": {
-        "title":"Welcome to Star Wars",
-        "welcomeMessage":"You can find whatever you want about Star Wars in this site",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2560px-Star_Wars_Logo.svg.png"
+    {
+      "id": 3,
+      "username": "Meltem",
+      "password": "1234",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "username": "Mehmet",
+      "password": "12345678",
+      "role": "user"
+    },
+    {
+      "id": 5,
+      "username": "Kübra",
+      "password": "1234",
+      "role": "user"
     }
+  ],
+  "header": {
+    "title": "Welcome to Starwars",
+    "login": "Login",
+    "register": "Register",
+    "players": "Players",
+    "planets": "Planets",
+    "logout": "Logout"
+  },
+  "footer": {
+    "copyright": "Trade mark",
+    "contact": "Contact"
+  },
+  "starwars": {
+    "title": "Welcome to Star Wars",
+    "welcomeMessage": "You can find whatever you want about Star Wars in this site",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2560px-Star_Wars_Logo.svg.png"
+  }
 }

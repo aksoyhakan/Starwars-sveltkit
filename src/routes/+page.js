@@ -6,6 +6,7 @@ export const load= async ({fetch})=>{
             return starwars;
         }
         return {
+            title:"Starwars",
             starwars:getStarWarsData(),
         }
     } catch (error) {

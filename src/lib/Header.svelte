@@ -20,6 +20,9 @@
             <a href="/{headerData.login.toLowerCase()}">
                 <p>{headerData?.login}</p>
             </a>
+            <a href="/{headerData.register.toLowerCase()}">
+                <p>{headerData?.register}</p>
+            </a>
             {/if}
             <a href="/{headerData.players.toLowerCase()}"> <p>{headerData?.players}</p></a>
             <a href="/{headerData.planets.toLowerCase()}">

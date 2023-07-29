@@ -12,6 +12,7 @@ export const load = async (serverLoadEvent) => {
             return data;
         }
         return {
+            title:"Players",
             response: getPlayers(page),
             currentPage: page
         }

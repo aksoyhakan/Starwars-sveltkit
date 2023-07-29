@@ -1,8 +1,8 @@
 <script>
     import Header from "$lib/Header.svelte";
     import Footer from "$lib/Footer.svelte";
+    import {page} from "$app/stores";
     export let data;
-    $:console.log(data.headerData)
 </script>
 
 <div class="main-sec">
@@ -10,7 +10,9 @@
 <slot />
 <Footer footerData={data.footerData}/>
 </div>
-
+<svelte:head>
+    <title>{$page.data.title||"Starwars"}</title>
+</svelte:head>
 <style>
     .main-sec{
         display: block;

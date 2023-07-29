@@ -13,6 +13,7 @@ export const load= async (serverLoadEvent)=>{
         }
 
         return {
+            title:"Planets",
             planets:getPlanets(page),
             currentPage:page,
         }
