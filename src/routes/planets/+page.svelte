@@ -17,7 +17,7 @@
 <style>
     .planets-container {
         max-width: 600px;
-        margin: 60px auto;
+        margin: 20px auto;
     }
  
     .pagination {

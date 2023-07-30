@@ -1,5 +1,5 @@
 import {fail, redirect} from "@sveltejs/kit";
-import { loginStatus } from "$lib/store.js";
+import { loginStatus,currentUser } from "$lib/store.js";
 
 export const actions={
     login:async(serverLoadEvent)=>{
@@ -22,6 +22,7 @@ export const actions={
         
         cookies.set("username",username,{path:"/",httpOnly:false});
         loginStatus.login();
+        currentUser.writeCurrentUser(username);
         throw redirect(303,`${url.searchParams.get("redirectTo")||"/"}`);
     }
 }

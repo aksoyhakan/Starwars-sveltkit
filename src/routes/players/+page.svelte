@@ -1,5 +1,4 @@
 <script>
-    import Player from '$lib/Player.svelte';
     import Pagination from '$lib/Pagination.svelte';
     export let data;
     $: totalPage = Math.ceil(data.response.count / 10);
@@ -7,8 +6,11 @@
 
 <div>
     <div class="players-container">
-        {#each data.response.results as player (player.name)}
-            <Player player={player}/>
+        {#each data.response.results as player,index (player.name)}
+        <a href={`/players/${(data.currentPage-1)*10+index+1}`}>
+            <p>{player.name}</p>
+        </a>
+            
         {/each}
     </div>
 
@@ -22,7 +24,7 @@
 <style>
     .players-container {
         max-width: 600px;
-        margin: 60px auto;
+        margin: 20px auto;
     }
     .pagination {
         max-width: 600px;
@@ -30,6 +32,10 @@
         justify-content: space-around;
         align-items: center;
         margin: 40px auto;
+    }
+    p{
+        border-bottom: 2px solid black;
+        padding: 4px;
     }
  
    

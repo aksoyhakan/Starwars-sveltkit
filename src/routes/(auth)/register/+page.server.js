@@ -2,7 +2,7 @@ import { redirect,fail } from "@sveltejs/kit";
 
 export const actions={
     register:async (serverLoadEvent)=>{
-        const {fetch,url,request}=serverLoadEvent;
+        const {fetch,request}=serverLoadEvent;
 
         const dataForm=await request.formData();
         const username=dataForm.get("username");
@@ -19,8 +19,6 @@ export const actions={
             password,
             role:"user"
         }
-
-        console.log(body);
         const newUserResponse=await fetch("http://localhost:4000/users",{
             method:"POST",
             headers: {
@@ -28,8 +26,6 @@ export const actions={
               },
             body:JSON.stringify(body)
         });
-        const newUser=newUserResponse.json();
-        console.log("new", newUser);
         throw redirect(301,"/login");
     }
 }

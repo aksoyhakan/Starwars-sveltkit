@@ -11,3 +11,19 @@ function getLoginStatus(){
 
 }
 export const loginStatus=getLoginStatus();
+
+function getCurrentUser(){
+    const {subscribe,set}=writable(Cookies.get("username")||"");
+
+    return {
+        subscribe,
+        writeCurrentUser:(currentUser)=>{
+            set(currentUser);
+        },
+        deleteCurrentUser:()=>{
+            set("");
+        }
+    }
+};
+
+export const currentUser=getCurrentUser();

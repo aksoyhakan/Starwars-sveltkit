@@ -4,9 +4,9 @@
 
 <div class="planet">
     <h3>{planet.name}</h3>
-    {#each planet.residents as resident (resident)}
-    <p>{resident}</p>
-    {/each}
+    <a href="/pl">
+        <p>Residents</p>
+    </a>
 </div>
 
 <style>
