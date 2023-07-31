@@ -4,9 +4,6 @@
 
 <div class="planet">
     <h3>{planet.name}</h3>
-    <a href="/pl">
-        <p>Residents</p>
-    </a>
 </div>
 
 <style>

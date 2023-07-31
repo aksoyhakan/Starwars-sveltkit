@@ -13,20 +13,27 @@ export const nodes = [
 	() => import('./nodes/9'),
 	() => import('./nodes/10'),
 	() => import('./nodes/11'),
-	() => import('./nodes/12')
+	() => import('./nodes/12'),
+	() => import('./nodes/13'),
+	() => import('./nodes/14'),
+	() => import('./nodes/15'),
+	() => import('./nodes/16')
 ];
 
-export const server_loads = [0,4];
+export const server_loads = [0,3,5];
 
 export const dictionary = {
-		"/": [5],
-		"/(auth)/login": [~6],
-		"/planets": [~8,[2]],
-		"/players": [~9,[3]],
-		"/players/[playerId]": [~10,[3,4]],
-		"/players/[playerId]/films": [~11,[3,4]],
-		"/players/[playerId]/films/[filmId]": [~12,[3,4]],
-		"/(auth)/register": [~7]
+		"/": [6],
+		"/(auth)/login": [~7],
+		"/planets": [~9,[2]],
+		"/planets/[planetId]": [~10,[2,3]],
+		"/planets/[planetId]/residents": [~11,[2,3]],
+		"/planets/[planetId]/residents/[playerId]": [~12,[2,3]],
+		"/players": [~13,[4]],
+		"/players/[playerId]": [~14,[4,5]],
+		"/players/[playerId]/films": [~15,[4,5]],
+		"/players/[playerId]/films/[filmId]": [~16,[4,5]],
+		"/(auth)/register": [~8]
 	};
 
 export const hooks = {

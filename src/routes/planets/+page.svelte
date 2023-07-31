@@ -1,16 +1,17 @@
 <script>
-    import Planet from '$lib/Planet.svelte';
-    import Pagination from '$lib/Pagination.svelte';
+    import PaginationPlanets from '$lib/PaginationPlanets.svelte';
     export let data;
     $: totalPage=Math.ceil(data.planets.count/10);
 </script>
 <div class="planets-container">
-{#each data.planets.results as planet (planet.name)}
-    <Planet planet={planet} />
+{#each data.planets.results as planet,index (planet.name)}
+    <a href={`/planets/${(data.currentPage-1)*10+index+1}`}>
+        <p>{planet.name}</p>
+    </a>
 {/each}
 <div class="pagination">
 {#each Array(totalPage) as _ ,i}
-    <Pagination page={i} currentPage={data.currentPage}/>
+    <PaginationPlanets page={i} currentPage={data.currentPage}/>
 {/each}
 </div>
 </div>
@@ -26,6 +27,11 @@
         justify-content: space-around;
         align-items: center;
         margin: 40px auto;
+    }
+
+    p{
+        padding: 4px;
+        border-bottom: 2px solid black;
     }
 </style>
 

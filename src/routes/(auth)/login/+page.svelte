@@ -1,6 +1,7 @@
 <script>
     import { page } from "$app/stores";
     export let form;
+
     let redirectTo = $page.url.searchParams.get("redirectTo")||"/ ";
 </script>
 
@@ -12,7 +13,7 @@
                 type="text"
                 id="username"
                 name="username"
-                value={form?.username ?? ""}
+                value={form?.username || ""}
             />
         </div>
         <div>
